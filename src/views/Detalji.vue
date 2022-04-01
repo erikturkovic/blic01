@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     {{ name }}
-        <li v-for="book in books" v-if="book.name == name" v-bind:key="book.name">
+    <li v-for="book in books" v-if="book.name == name" v-bind:key="book.name">
       Autori -> {{ book.authors }}
     </li>
     <li v-for="book in books" v-if="book.name == name" v-bind:key="book.name">
@@ -19,6 +19,9 @@
     <li v-for="book in books" v-if="book.name == name" v-bind:key="book.name">
       Broj likova -> {{ book.characters.length }}
     </li>
+    <form>
+      <input type="button" value="Go back!" onclick="history.back()" />
+    </form>
   </div>
 </template>
 
